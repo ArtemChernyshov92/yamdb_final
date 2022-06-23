@@ -8,10 +8,9 @@ from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-from reviews.models import Category, CustomUser, Genre, Review, Title
 
 from api_yamdb.settings import DEFAULT_FROM_EMAIL as FROM_EMAIL
-
+from reviews.models import Category, CustomUser, Genre, Review, Title
 from .filterset import TitleFilter
 from .mixins import CreateListDestroyViewSet
 from .permissions import IsAdmin
