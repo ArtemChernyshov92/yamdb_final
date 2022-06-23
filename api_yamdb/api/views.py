@@ -8,20 +8,20 @@ from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-
 from reviews.models import Category, CustomUser, Genre, Review, Title
+
+from api_yamdb.settings import DEFAULT_FROM_EMAIL as FROM_EMAIL
+
 from .filterset import TitleFilter
 from .mixins import CreateListDestroyViewSet
-from .permissions import (IsAdmin, IsAdminOrReadOnly,
-                          IsAdminOrModeratorOrAuthorOrReadOnly
-                          as AuthorAndStuff)
+from .permissions import IsAdmin
+from .permissions import IsAdminOrModeratorOrAuthorOrReadOnly as AuthorAndStuff
+from .permissions import IsAdminOrReadOnly
 from .serializers import (AboutUserSerializer, CategorySerializer,
                           CommentSerializer, CustomUserSerializer,
                           GenreSerializer, ReadOnlyTitleSerializer,
-                          ReviewSerializer,
-                          TitleSerializer, SignUpSerializer,
+                          ReviewSerializer, SignUpSerializer, TitleSerializer,
                           TokenSerializer)
-from api_yamdb.settings import DEFAULT_FROM_EMAIL as FROM_EMAIL
 
 
 class CategoryViewSet(CreateListDestroyViewSet):
