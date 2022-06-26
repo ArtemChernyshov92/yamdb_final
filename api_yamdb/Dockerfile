@@ -10,6 +10,6 @@ COPY ./ .
 
 RUN mkdir ./static
 
-COPY redoc.yaml ./static
+COPY ./static/redoc.yaml ./static
 
 CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000" ]
