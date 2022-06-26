@@ -1,3 +1,4 @@
+![example event parameter](https://github.com/ArtemChernyshov92/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
 # yamdb_final
 
 Проект api_yamdb позволяет пользователям оставлять отзывы на произведения (не более одного на произведение) и выставлять оценки.
